@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "hemingway"
+version = "0.1.0"
+description = ""
+authors = ["penglingwei <penglingwei@zju.edu.cn>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyter-book = "^0.13.1"
+matplotlib = "^3.6.2"
+numpy = "^1.24.1"
+sympy = "^1.11.1"
+
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+secondary = false
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
