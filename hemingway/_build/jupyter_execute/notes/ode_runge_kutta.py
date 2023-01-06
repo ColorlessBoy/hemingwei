@@ -188,17 +188,12 @@ K2 = (f_taylor.subs([(dx, a2*h), (dy, b21*h*K1)])+sp.O(h**5)).expand().removeO()
 K3 = (f_taylor.subs([(dx, a3*h), (dy, b31*h*K1 + b32*h*K2)])+sp.O(h**5)).expand().removeO()
 K4 = (f_taylor.subs([(dx, a4*h), (dy, b41*h*K1 + b42*h*K2 + b43*h*K3)])+sp.O(h**5)).expand().removeO()
 ynp1 = (y_(x) + h * (C1*K1 + C2*K2 + C3*K3 + C4*K4)).expand()
-
-
-# In[8]:
-
-
 target_ynp1 = y_taylor.subs(dx, h).expand()
 diff = ynp1 - target_ynp1
 display(target_ynp1)
 
 
-# In[9]:
+# In[17]:
 
 
 params = [C1, C2, C3, C4, h, a2, a3, a4, b21, b31, b32, b41, b42, b43]
@@ -217,13 +212,13 @@ print(len(conds))
 display(*conds)
 
 
-# In[10]:
+# In[18]:
 
 
 conds[3] - conds[4] + conds[6]
 
 
-# In[11]:
+# In[19]:
 
 
 a = C2*(a2 - b21)**2/2 + C3*(a3 - b31 - b32)**2/2 + C4*(a4 - b41 - b42 - b43)**2/2
@@ -231,7 +226,7 @@ b = conds[3] - conds[4] + conds[6]
 display(a, b, a.expand() - b.expand())
 
 
-# In[89]:
+# In[20]:
 
 
 conds2 = [
@@ -251,7 +246,7 @@ print(len(conds2))
 display(*conds2)
 
 
-# In[87]:
+# In[21]:
 
 
 conds[2].collect(C2).collect(C3).collect(C4).subs([(b21, a2), (b31+b32, a3), (b41+b42+b43, a4)])
@@ -277,7 +272,7 @@ conds[18].collect(C3*a2*b32).collect(C4*a2*b42).collect(C4*a3*b43).subs([(b21, a
 # \end{aligned}
 # $$
 
-# In[93]:
+# In[22]:
 
 
 val_map = {

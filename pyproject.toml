@@ -11,6 +11,7 @@ jupyter-book = "^0.13.1"
 matplotlib = "^3.6.2"
 numpy = "^1.24.1"
 sympy = "^1.11.1"
+ghp-import = "^2.1.0"
 
 
 [[tool.poetry.source]]
@@ -19,6 +20,10 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 default = true
 secondary = false
 
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx-autobuild = "^2021.3.14"
 
 [build-system]
 requires = ["poetry-core"]
