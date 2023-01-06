@@ -37,5 +37,8 @@ K2 = (f_taylor.subs([(dx, a2*h), (dy, b21*h*K1)])+sp.O(h**5)).expand().removeO()
 K3 = (f_taylor.subs([(dx, a3*h), (dy, b31*h*K1 + b32*h*K2)])+sp.O(h**5)).expand().removeO()
 K4 = (f_taylor.subs([(dx, a4*h), (dy, b41*h*K1 + b42*h*K2 + b43*h*K3)])+sp.O(h**5)).expand().removeO()
 ynp1 = (y_(x) + h * (C1*K1 + C2*K2 + C3*K3 + C4*K4)).expand()
+target_ynp1 = y_taylor.subs(dx, h).expand()
+diff = ynp1 - target_ynp1
+display(target_ynp1)
 -------------------
 
