@@ -10,7 +10,7 @@ logo: logo.png
 execute:
   execute_notebooks: cache
   stderr_output: show
-  timeout: 240
+  timeout: 600
 
 # Define the name of the latex output file for PDF builds
 latex:
