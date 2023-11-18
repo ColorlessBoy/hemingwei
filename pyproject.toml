@@ -17,8 +17,7 @@ ghp-import = "^2.1.0"
 [[tool.poetry.source]]
 name = "tsinghua"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-default = true
-secondary = false
+priority = "default"
 
 
 
