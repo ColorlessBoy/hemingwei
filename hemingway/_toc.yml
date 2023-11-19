@@ -3,9 +3,15 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: notes/taste_controller
-- file: notes/ode_runge_kutta
-- file: notes/ode_finite_difference_methods
-- file: notes/rank_simulator_gaussian
-- file: notes/bezier_curves
+parts:
+  - caption: Notes
+    chapters:
+    - file: notes/taste_controller
+    - file: notes/ode_runge_kutta
+    - file: notes/ode_finite_difference_methods
+    - file: notes/rank_simulator_gaussian
+    - file: notes/bezier_curves
+  - caption: Casual Inference
+    numbered: true
+    chapters:
+    - file: casual_inference/1_random_controlled_trials
