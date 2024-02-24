@@ -23,6 +23,7 @@ priority = "default"
 
 [tool.poetry.group.dev.dependencies]
 sphinx-autobuild = "^2021.3.14"
+pandas = "^2.2.1"
 
 [build-system]
 requires = ["poetry-core"]
